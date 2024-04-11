@@ -48,8 +48,8 @@
 }
 
 .menu__lista:nth-child(2),
-menu__lista:nth-child(3),
-menu__lista:nth-child(4){
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4){
     display: none;
 }
 
@@ -66,5 +66,46 @@ menu__lista:nth-child(4){
         justify-content: space-between;
     }
     
+}
+
+@media (min-width:1440px){
+    
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+        
+    }
+    .menu__lista{
+        height: auto;
+        padding: 20xp 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .videojuegos{
+        order:3;
+    }
+    .peliculas{
+        order:2;
+    }
+    .premium{
+        order: 1;
+    }
+
+
 }
 

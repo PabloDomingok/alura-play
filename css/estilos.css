@@ -97,6 +97,7 @@ body {
 .menu__container {
     background-color: var(--azul-oscuro);
     font-size: 14px;
+    
 }
 
 .menu__itens:hover {
@@ -179,7 +180,6 @@ body {
 .icono__videojuegos::before {
     content: url(../img/menu/videojuegos.png);
 }
-
 /* SECCIÓN SUPERIOR */
 
 .superior__seccion__container {
@@ -216,21 +216,35 @@ body {
     padding: 153px 20px 10px 20px;
 }
 
-.videos__item:hover {
-    transform: scale(1.3);
-    background-color: var(--azul-claro);
+/* .videos__item:hover {
+    transform: scale(1.05);
+    background-color: transparent;
     z-index: 2;
     transition: .5s;
-}
+    border-radius: 10px;
+} */
 
 .detalles__video h3 {
     font-weight: 700;
     color: #444444;
+    pointer-events: auto;
 }
 
 .detalles__video p {
     font-size: 14px;
     color: #444444;
+    pointer-events: auto;
+}
+iframe{
+    border-radius: 10px;
+}
+iframe:hover{
+transform: scale(1.05);
+    background-color: transparent;
+    z-index: 2;
+    transition: .2s;
+    border-radius: 0px;
+    pointer-events: none;
 }
 
 /* RODAPIÉ */

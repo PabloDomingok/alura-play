@@ -1,4 +1,3 @@
-/* Header */
 .cabecera__container{
     display: flex;
     justify-content: space-between;
@@ -7,19 +6,8 @@
     top: 0;
 }
 
-
-/* Footer */
-.rodapie__container{
+.cabecera__buscar__item{
     display: none;
-}
-
-/* Seccion sperior */
-.superior__seccion__container{
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    overflow: scroll;
-    gap: 15px;
 }
 
 .menu__container{
@@ -33,7 +21,6 @@
     display: flex;
     justify-content: space-around;
     height: 100%;
-      
 }
 
 .menu__lista li{
@@ -44,7 +31,6 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-
 }
 
 .menu__lista:nth-child(2),
@@ -53,23 +39,85 @@
     display: none;
 }
 
+.superior__seccion__container{
+    display: flex;
+    align-items: center;
+    white-space:  nowrap;
+    overflow: scroll;
+    gap: 15px;
+}
 
-/* Diseño responsivo (media queries) */
-@media (min-width:834px) {
+/* Seccion Videos */
 
-    /* Header */
+.videos__item{
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+.videos__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+ /* DESCRIPCIÓN DE LOS VIDEOS */ 
+
+ .descripcion-video {
+    margin-top: 1rem;
+    display: flex;
+    align-items: start; 
+    
+}
+
+.descripcion-video img {
+    margin-right: 1rem; 
+    flex-shrink: 0;  /*  Evita que la imagen se reduzca */
+    
+}
+
+.detalles__video {
+    flex-direction: column;
+    text-align:left;
+
+}
+
+.detalles__video h3{
+    margin-bottom: 10px;
+}
+
+/* Rodapie */
+.rodapie__container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+@media (min-width: 834px){
     .cabecera__buscar__item{
-        display:block;
+        display: block;
     }
-    /* Footer */
+
     .rodapie__container{
         justify-content: space-between;
+    }
+
+    .menu__container{
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+    }
+    
+    .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
     }
     
 }
 
-@media (min-width:1440px){
-    
+@media (min-width: 1440px){
     .menu__container{
         width: 239px;
         overflow: scroll;
@@ -79,11 +127,11 @@
     .menu__lista:nth-child(3),
     .menu__lista:nth-child(4){
         display: flex;
-        
     }
+
     .menu__lista{
         height: auto;
-        padding: 20xp 17px 20px 15px;
+        padding: 20px 17px 20px 15px;
         gap: 15px;
     }
 
@@ -96,16 +144,16 @@
         gap: 15px;
         align-items: center;
     }
+
     .videojuegos{
-        order:3;
+        order: 3;
     }
+
     .peliculas{
-        order:2;
+        order: 2;
     }
+
     .premium{
         order: 1;
     }
-
-
 }
-
